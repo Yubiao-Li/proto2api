@@ -1,0 +1,1657 @@
+{
+  "protoPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwap/comm/proto/mmbizwapcomment.proto",
+  "protoTargetPath": "/mmbiz/mmbizwap/comm/proto/mmbizwapcomment.proto",
+  "outputPath": "/root/mmbizappmsg/src/api/mmbiz/mmbizwap/comm/proto/mmbizwapcomment.ts",
+  "comment": "",
+  "imports": [
+    {
+      "importClause": [
+        {
+          "type": "BaseResp",
+          "dependencyTypeName": "BaseResp"
+        },
+        {
+          "type": "IPWording",
+          "dependencyTypeName": "IPWording"
+        },
+        {
+          "type": "AppMsgSegment",
+          "dependencyTypeName": "AppMsgSegment"
+        }
+      ],
+      "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwap/comm/mmbizwapbase.proto",
+      "moduleSpecifier": "../mmbizwapbase"
+    },
+    {
+      "importClause": [
+        {
+          "type": "BaseResp",
+          "dependencyTypeName": "MMBizWxa.BaseResp"
+        }
+      ],
+      "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwxalogicsvr/comm/mmbizwxa.proto",
+      "moduleSpecifier": "../../../mmbizwxalogicsvr/comm/mmbizwxa"
+    },
+    {
+      "importClause": [
+        {
+          "type": "CommentReplyList",
+          "dependencyTypeName": "mmbizmsgcomment.CommentReplyList"
+        }
+      ],
+      "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizcomment/proto/mmbizcommentinfo.proto",
+      "moduleSpecifier": "../../../mmbizcomment/proto/mmbizcommentinfo"
+    }
+  ],
+  "enums": [],
+  "interfaces": [
+    {
+      "name": "ExposureComment",
+      "comment": null,
+      "members": [
+        {
+          "name": "content_id",
+          "propertyType": {
+            "type": "string",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_friend_comment",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_elected_comment",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "scene",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "ExposureCommentList",
+      "comment": null,
+      "members": [
+        {
+          "name": "exposure_comment",
+          "propertyType": {
+            "type": "ExposureComment",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "GetAppMsgSegmentResp",
+      "comment": null,
+      "members": [
+        {
+          "name": "base_resp",
+          "propertyType": {
+            "type": "BaseResp",
+            "dependencyTypeName": "BaseResp",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwap/comm/mmbizwapbase.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "segment_list",
+          "propertyType": {
+            "type": "SegmentItem",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        },
+        {
+          "name": "user_info",
+          "propertyType": {
+            "type": "UserLikeInfo",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        },
+        {
+          "name": "is_share_limit",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "GetAppMsgCommentReplyBuffer",
+      "comment": null,
+      "members": [
+        {
+          "name": "reply_ids",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true
+        }
+      ]
+    },
+    {
+      "name": "AddCommentResp",
+      "comment": null,
+      "members": [
+        {
+          "name": "ret",
+          "propertyType": {
+            "type": "int32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "errmsg",
+          "propertyType": {
+            "type": "string",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "my_id",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "content_id",
+          "propertyType": {
+            "type": "string",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "base",
+          "propertyType": {
+            "type": "BaseResp",
+            "dependencyTypeName": "MMBizWxa.BaseResp",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwxalogicsvr/comm/mmbizwxa.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "GetAppMsgCommentResp",
+      "comment": null,
+      "members": [
+        {
+          "name": "base_resp",
+          "propertyType": {
+            "type": "BaseResp",
+            "dependencyTypeName": "BaseResp",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwap/comm/mmbizwapbase.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "enabled",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_fans",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "nick_name",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "logo_url",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "my_comment",
+          "propertyType": {
+            "type": "Comment",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        },
+        {
+          "name": "elected_comment",
+          "propertyType": {
+            "type": "Comment",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        },
+        {
+          "name": "friend_comment",
+          "propertyType": {
+            "type": "Comment",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        },
+        {
+          "name": "elected_comment_total_cnt",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "only_fans_can_comment",
+          "propertyType": {
+            "type": "bool",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "friend_comment_total_cnt",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "only_fans_days_can_comment",
+          "propertyType": {
+            "type": "bool",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_fans_days",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "reply_flag",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "business_id",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "not_pay_can_comment",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "base",
+          "propertyType": {
+            "type": "BaseResp",
+            "dependencyTypeName": "MMBizWxa.BaseResp",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwxalogicsvr/comm/mmbizwxa.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "GetAppMsgCommentReplyResp",
+      "comment": null,
+      "members": [
+        {
+          "name": "reply_list",
+          "propertyType": {
+            "type": "CommentReplyList",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "base_resp",
+          "propertyType": {
+            "type": "BaseResp",
+            "dependencyTypeName": "BaseResp",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwap/comm/mmbizwapbase.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "continue_flag",
+          "propertyType": {
+            "type": "bool",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "defaultValue": false
+        },
+        {
+          "name": "buffer",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "AddCommentReplyResp",
+      "comment": null,
+      "members": [
+        {
+          "name": "ret",
+          "propertyType": {
+            "type": "int32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "errmsg",
+          "propertyType": {
+            "type": "string",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "reply_id",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "GetCommentResp",
+      "comment": null,
+      "members": [
+        {
+          "name": "base_resp",
+          "propertyType": {
+            "type": "BaseResp",
+            "dependencyTypeName": "BaseResp",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwap/comm/mmbizwapbase.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "comment",
+          "propertyType": {
+            "type": "Comment",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        },
+        {
+          "name": "elected_comment_total_cnt",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "read_num",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "like_num",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "AppMsgCommentInfo",
+      "comment": null,
+      "members": [
+        {
+          "name": "content",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "nick_name",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "head_img",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "user_role",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "defaultValue": 0
+        }
+      ]
+    },
+    {
+      "name": "Comment",
+      "comment": null,
+      "members": [
+        {
+          "name": "id",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "my_id",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "nick_name",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "logo_url",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "content",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "create_time",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_elected",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "content_id",
+          "propertyType": {
+            "type": "string",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "like_id",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "like_num",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "like_status",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_from_friend",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "reply",
+          "propertyType": {
+            "type": "CommentReplyList",
+            "dependencyTypeName": "mmbizmsgcomment.CommentReplyList",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizcomment/proto/mmbizcommentinfo.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_from_me",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_top",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "defaultValue": 0
+        },
+        {
+          "name": "reply_new",
+          "propertyType": {
+            "type": "CommentReplyList",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "ip_wording",
+          "propertyType": {
+            "type": "IPWording",
+            "dependencyTypeName": "IPWording",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwap/comm/mmbizwapbase.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "segment",
+          "propertyType": {
+            "type": "AppMsgSegment",
+            "dependencyTypeName": "AppMsgSegment",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwap/comm/mmbizwapbase.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "separation_line",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "CommentReply",
+      "comment": null,
+      "members": [
+        {
+          "name": "content",
+          "propertyType": {
+            "type": "string",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "openid",
+          "propertyType": {
+            "type": "string",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "create_time",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "reply_id",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_deleted",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "reply_like_num",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "reply_like_status",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "reply_is_elected",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "reply_del_flag",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "nick_name",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "logo_url",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "to_content",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "to_nick_name",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_from",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "to_reply_del_flag",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "author_like_status",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_from_friend",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "ip_wording",
+          "propertyType": {
+            "type": "IPWording",
+            "dependencyTypeName": "IPWording",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwap/comm/mmbizwapbase.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "CommentReplyList",
+      "comment": null,
+      "members": [
+        {
+          "name": "reply_list",
+          "propertyType": {
+            "type": "CommentReply",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        },
+        {
+          "name": "max_reply_id",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "reply_total_cnt",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "UserLikeInfo",
+      "comment": null,
+      "members": [
+        {
+          "name": "head_img",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "nick_name",
+          "propertyType": {
+            "type": "bytes",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "ModifyDetail",
+      "comment": null,
+      "members": [
+        {
+          "name": "list",
+          "propertyType": {
+            "type": "ModifyDetail.Item",
+            "dependencyTypeName": "",
+            "dependencyType": "inline",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        }
+      ],
+      "module": {
+        "name": "ModifyDetail",
+        "comment": "This the module of ModifyDetail",
+        "enums": [],
+        "interfaces": [
+          {
+            "name": "Item",
+            "comment": null,
+            "members": [
+              {
+                "name": "index_for_underline",
+                "propertyType": {
+                  "type": "uint32",
+                  "dependencyTypeName": "",
+                  "dependencyType": "system",
+                  "resolvedPath": "",
+                  "map": false
+                },
+                "comment": null,
+                "repeated": false,
+                "optional": false
+              },
+              {
+                "name": "diff_length",
+                "propertyType": {
+                  "type": "int32",
+                  "dependencyTypeName": "",
+                  "dependencyType": "system",
+                  "resolvedPath": "",
+                  "map": false
+                },
+                "comment": null,
+                "repeated": false,
+                "optional": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "SegmentLikeStat",
+      "comment": null,
+      "members": [
+        {
+          "name": "is_user",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "count",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "friend_count",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "friend_idx",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true
+        },
+        {
+          "name": "friend_time",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "UnderLineInfo",
+      "comment": null,
+      "members": [
+        {
+          "name": "friend_idx",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true
+        },
+        {
+          "name": "count",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_line",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "time",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "friend_size",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "ShareLineInfo",
+      "comment": null,
+      "members": [
+        {
+          "name": "count",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "is_my_share",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "friend_count",
+          "propertyType": {
+            "type": "uint32",
+            "dependencyTypeName": "",
+            "dependencyType": "system",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "SegmentItem",
+      "comment": null,
+      "members": [
+        {
+          "name": "segment",
+          "propertyType": {
+            "type": "AppMsgSegment",
+            "dependencyTypeName": "AppMsgSegment",
+            "dependencyType": "external",
+            "resolvedPath": "/root/mmbizappmsg/src/proto/mmbiz/mmbizwap/comm/mmbizwapbase.proto",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "my_comment",
+          "propertyType": {
+            "type": "Comment",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        },
+        {
+          "name": "elected_comment",
+          "propertyType": {
+            "type": "Comment",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        },
+        {
+          "name": "seg_like",
+          "propertyType": {
+            "type": "SegmentLikeStat",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "share_info",
+          "propertyType": {
+            "type": "ShareLineInfo",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "line_info",
+          "propertyType": {
+            "type": "UnderLineInfo",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "save_info",
+          "propertyType": {
+            "type": "UnderLineInfo",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": false,
+          "optional": false
+        },
+        {
+          "name": "user_info",
+          "propertyType": {
+            "type": "UserLikeInfo",
+            "dependencyTypeName": "",
+            "dependencyType": "current",
+            "resolvedPath": "",
+            "map": false
+          },
+          "comment": null,
+          "repeated": true,
+          "optional": false
+        }
+      ]
+    }
+  ],
+  "apiModules": [],
+  "apiPrefixPath": ""
+}

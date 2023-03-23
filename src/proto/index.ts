@@ -208,6 +208,8 @@ export function parseProto(
 
       if (!pathObj.path && !notFoundList.find((k) => k === target)) {
         notFoundList.push(target);
+        console.warn('not found ', target);
+        return;
       }
     }
 

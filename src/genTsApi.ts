@@ -34,13 +34,15 @@ function renderTypeName(
   isImport: boolean = false
 ) {
   let name = info.type;
-  if (messageMap[info.type]) {
-    if (isImport) {
-      name = name + " as " + toHump(info.aliasName, true);
-    } else {
-      name = toHump(info.aliasName, true);
-    }
+  // console.log(isImport, info, name, messageMap)
+  // if (messageMap[info.type]) {
+  const humpName = toHump(info.aliasName, true);
+  if (isImport && name !== humpName) {
+    name = name + ' as ' + humpName;
+  } else {
+    name = humpName;
   }
+  // }
   return name;
 }
 /**

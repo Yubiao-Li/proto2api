@@ -24,6 +24,6 @@
     "include": [
       "src/*.d.ts",
       "src/**/*.ts"
-    ],
+, "test/test.ts", "test/test.ts"    ],
     "exclude": ["node_modules/**"]
   }

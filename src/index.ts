@@ -32,6 +32,5 @@ export function main(options: Options) {
   for (const filePath in result) {
     outputFileSync(filePath, result[filePath], "utf8");
     success(`${filePath} generated successfully`);
-    console.log();
   }
 }
