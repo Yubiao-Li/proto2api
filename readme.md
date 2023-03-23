@@ -1,45 +1,14 @@
-# 用于把proto文件转换成特定语言的api文件
+# 这是什么
 
-1. 先把需要转换的proto文件确定好
-2. 依次遍历proto文件，然后转换成ts文件
+这是一个用于拉取后台pb文件并转换成ts接口的文件，方便开发过程中与后台对协议
 
-具体使用方式：https://www.yuque.com/yuexing0921/blog/ebmrh5
+## 怎么用
 
-## 快速开始
-``` bash
-npm install -g proto2api
+> 所有pb文件都以submodule的形式放在src/proto，后续如果要新加submodule也要放这。因为后台是大仓，为了减少拉取pb的时间，用了sparecheckout的方式来管理submodule
+1. 和后台确认pb文件名，然后`echo ${filepath} > .git/modules/${modulepath}/info/sparse-checkout`，这一步是告诉git什么文件要被拉取。（实在不知道怎么写可以参考`.git/modules/src/mmbiz/info/sparse-checkout`）
 
-cd proto2api 
+2. `npm run proto2api`，生成的ts文件在src/api。
 
-proto2api -d examples/hello.proto -o api
-```
-## 命令行说明
-```
-Usage: proto2api [options]
+## 我要添加新的仓库
 
-Convert proto file to api file
-
-Options:
-Options:
-  -V, --version         output the version number
-  --debug               load code with ts-node for debug
-  -d, --dir <type>      directory address of Protocol Buffers. eq: /path/pbdir
-                        or /path/hello.proto
-  -o, --output <type>   Output api path
-  --protoDir <type>     The root directory for loading proto files. By default,
-                        the directory folder named proto3|proto2 will be found.
-                        If it still does not exist, it will try to find it
-                        automatically, but the correctness is not guaranteed.
-                        (default: "")
-  --apiName <type>      apiName (default: "webapi")
-  --apiPath <type>      apiPath (default: "~/utils/api")
-  --prefix <type>       api prefix path (default: "")
-  --depPath <type>      the address of the external dependency proto library.
-                        eq: /common/proto3 (default: "")
-  --ignore [ignore...]  ignore unnecessary generated pb files (default:
-                        "google|swagger")
-  -h, --help            display help for command
-  -h, --help            display help for command
-```
-## 参考文档
-Google Protobuf 语法指南 https://developers.google.com/protocol-buffers/docs/proto3
+参考[这个](https://stackoverflow.com/questions/45688121/how-to-do-submodule-sparse-checkout-with-git)添加仓库

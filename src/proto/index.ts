@@ -216,10 +216,11 @@ export function parseProto(
   };
 
   try {
+    // 注释有问题，先关闭alternateCommentMode
     root
       .loadSync(protoFiles, {
         keepCase: true,
-        alternateCommentMode: true,
+        alternateCommentMode: false,
       })
       .resolveAll();
   } catch (e) {

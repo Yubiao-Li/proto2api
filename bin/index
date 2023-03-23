@@ -4,12 +4,10 @@ const { Command } = require("commander"); // include commander in git clone of c
 const path = require("path");
 const fse = require("fs-extra");
 const { Glob } = require("glob");
-const pkg = require("../package.json");
 const resolve = (p) => path.resolve(p);
 const program = new Command();
 
 program
-  .version(pkg.version)
   .option("--debug", "load code with ts-node for debug")
   .requiredOption(
     "-d, --dir <type>",
@@ -34,7 +32,6 @@ program
     "ignore unnecessary generated pb files",
     "google|swagger"
   )
-  .description(pkg.description)
   .action(async (opt) => {
     const dirPath = resolve(opt.dir);
     if (!fse.existsSync(dirPath)) {
@@ -60,8 +57,6 @@ program
       protoDir = result ? result[0] : "";
     }
 
-    const devMode = opt.debug;
-
     const output = resolve(opt.output);
 
     let ignore;
@@ -83,16 +78,11 @@ program
       ignore,
     };
 
-    if (devMode) {
-      require("ts-node").register({
-        project: `${__dirname}/../tsconfig.spec.json`,
-      });
-      const { main } = require(`${__dirname}/../src/index`);
-      main(options);
-    } else {
-      const { main } = require(`${__dirname}/../dist/index`);
-      main(options);
-    }
+    require("ts-node").register({
+      project: `${__dirname}/../tsconfig.spec.json`,
+    });
+    const { main } = require(`${__dirname}/../dist/index`);
+    main(options);
   });
 
 program.parse();
