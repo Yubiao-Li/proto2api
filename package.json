@@ -1,21 +1,22 @@
 {
-  "name": "proto2api",
-  "version": "0.0.8",
+  "name": "@yubiao_li/proto2api",
+  "version": "0.0.1",
   "description": "Convert proto file to api file",
   "bin": {
-    "proto2api": "./bin/index"
+    "proto2api": "bin/index"
   },
   "packageManager": "pnpm@6.32.3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yuexing0921/proto2api"
+    "url": "git+https://github.com/yuexing0921/proto2api.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.js",
   "scripts": {
     "dev": "tsc --watch",
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "proto"
@@ -43,5 +44,9 @@
     "babel-jest": "^27.5.1",
     "jest": "^27.5.1",
     "typescript": "^4.5.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/yuexing0921/proto2api/issues"
+  },
+  "homepage": "https://github.com/yuexing0921/proto2api#readme"
 }
